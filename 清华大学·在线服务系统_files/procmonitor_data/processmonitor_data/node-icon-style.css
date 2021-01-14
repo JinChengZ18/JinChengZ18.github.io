@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'icon-np';
+  src:  url('fonts/icon-np.eot?k2ro6f');
+  src:  url('fonts/icon-np.eot?k2ro6f#iefix') format('embedded-opentype'),
+    url('fonts/icon-np.ttf?k2ro6f') format('truetype'),
+    url('fonts/icon-np.woff?k2ro6f') format('woff'),
+    url('fonts/icon-np.svg?k2ro6f#icon-np') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="np-"], [class*=" np-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-np' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.np-remove-sign:before {
+  content: "\e906";
+}
+.np-pencil:before {
+  content: "\e907";
+}
+.np-warning-sign:before {
+  content: "\e908";
+}
+.np-concurrency-off:before {
+  content: "\e909";
+}
+.np-concurrency-on:before {
+  content: "\e90a";
+}
+.np-concurrency:before {
+  content: "\e90b";
+}
+.np-lines:before {
+  content: "\e90c";
+}
+.np-node-off:before {
+  content: "\e90d";
+}
+.np-node-on:before {
+  content: "\e90e";
+}
+.np-node-manual:before {
+  content: "\e90f";
+}
+.np-node-chose:before {
+  content: "\e910";
+}
+.np-swimpool:before {
+  content: "\e911";
+}
+.np-swimlanes:before {
+  content: "\e912";
+}
+.np-conment:before {
+  content: "\e913";
+}
+.np-sitemap:before {
+  content: "\e914";
+}
+.np-cogs:before {
+  content: "\e915";
+}
+.np-reply:before {
+  content: "\e900";
+}
+.np-off:before {
+  content: "\e901";
+}
+.np-refresh:before {
+  content: "\e902";
+}
+.np-fullscreen:before {
+  content: "\e903";
+}
+.np-check:before {
+  content: "\e904";
+}
+.np-circle:before {
+  content: "\e905";
+}
+

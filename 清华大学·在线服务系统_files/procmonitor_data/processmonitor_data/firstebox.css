@@ -1,0 +1,172 @@
+
+*{padding: 0; margin: 0;}
+
+
+#FB_secondLine {
+	font: 10px Arial, Helvetica, sans-serif;
+	color:#666666;
+}
+
+#FB_window a:link {color: #666666;}
+#FB_window a:visited {color: #666666;}
+#FB_window a:hover {color: #000;}
+#FB_window a:active {color: #666666;}
+#FB_window a:focus{color: #666666;}
+
+
+#FB_overlay {
+	position: fixed;
+	z-index:10100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+
+.FB_overlayMacFFBGHack {background: url(/mormhweb/images/firstebox/macFFBgHack.png) repeat;}
+.FB_overlayBG {
+	background-color:#000;
+	filter:alpha(opacity=00);
+	-moz-opacity: 0;
+	opacity: 0;
+}
+
+* html #FB_overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#FB_window {
+	position: fixed;
+	background: #ffffff;
+	z-index: 10102;
+	color:#000000;
+	display:none;
+	border: 2px solid #525252;
+	text-align:left;
+	
+}
+
+* html #FB_window { /* ie6 hack */
+position: absolute;
+
+}
+
+#FB_window img#FB_Image {
+	display:block;
+	margin: 15px 0 0 15px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+}
+
+#FB_caption{
+	height:25px;
+	padding:7px 30px 10px 25px;
+	float:left;
+}
+
+#FB_closeWindow{
+	height:25px;
+	padding:11px 25px 10px 0;
+	float:right;
+}
+
+#FB_closeAjaxWindow{
+	padding:7px 10px 5px 0;
+	margin-bottom:1px;
+	text-align:right;
+	float:right;
+}
+
+#FB_ajaxWindowTitle{
+	float:left;
+	padding:7px 0 5px 10px;
+	margin-bottom:1px;
+}
+
+#FB_title{
+	background-color:#e8e8e8;
+	height:27px;
+	font-weight:700;
+}
+
+#FB_ajaxContent{
+	clear:both;
+	padding:2px 15px 15px 15px;
+	overflow:auto;
+	text-align:left;
+	line-height:1.4em;
+}
+
+#FB_ajaxContent.FB_modal{
+	padding:15px;
+}
+
+#FB_ajaxContent p{
+	padding:5px 0px 5px 0px;
+}
+
+#FB_load{
+	position: fixed;
+	display:none;
+	height:13px;
+	width:208px;
+	z-index:10103;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -104px; 
+}
+
+* html #FB_load { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (FBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#FB_HideSelect{
+	z-index:10099;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	height:100%;
+	width:100%;
+}
+
+* html #FB_HideSelect { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#FB_iframeContent{
+	clear:both;
+	border:none;
+	margin-bottom:-1px;
+	margin-top:1px;
+	_margin-bottom:1px;
+}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1010;
+	}
+#FB_window>#hoverNav{ left: 0;top:15px;}
+#hoverNav a{ outline: none;}
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(/mormhweb/images/firstebox/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(/mormhweb/images/firstebox/prev.gif) left 50% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(/mormhweb/images/firstebox/next.gif) right 50% no-repeat; }

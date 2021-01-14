@@ -1,0 +1,184 @@
+.wdialog {
+	background-color: #434343;
+	color: #404040;
+	display: none;
+	opacity:30;
+	padding:6px;
+	overflow:hidden;
+    border-radius: 6px;
+}
+
+.wdialog_content{
+	background-color: #f6f7f9;
+	height:100%;
+}
+
+.wbtn_confirm {
+	width:100px;
+	height:28px;
+	background:url('images/dialog/dialogBtBg.png') center center repeat-x;
+	display:block;
+	line-height:28px;
+	text-align:center;
+	border-left: 1px solid #487e00;
+	border-right:1px solid #487e00;
+	float:left;
+	color:#e9f0f3;
+}
+
+.wbtn_confirm:hover{
+	cursor:pointer;
+}
+
+.wbtn_cancel {
+	width:100px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	margin-left:10px;
+	background:url('images/dialog/dialogCancelBg.png') center center repeat-x;
+	display:block;
+	border-left: 1px solid #6b7376;
+	border-right: 1px solid #6b7376;
+	float:left;
+	color:#e9f0f3;
+}
+
+.wbtn_cancel:hover{
+	cursor:pointer;
+}
+
+.wdialog_header{
+	background-color: #1d65b7;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	display:block;
+	float:top;
+	color:#fff;
+}
+
+.wdialog_header .wdialog_title{
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	margin-left:12px;
+	font-family:"微软雅黑";
+	font-weight:bold;
+}
+
+
+
+.wdialog_body{
+	background-color: #f6f7f9;
+	padding:6px 12px 6px 12px;
+	height:75%;
+}
+
+.wdialog_toolbar {
+	width:100%;
+	background-color: #f6f7f9;
+	text-align:center;
+	height:40px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.wdialog_toolbar .centerButton{
+	width:214px;
+	margin:8px auto;
+	font-family:"微软雅黑";
+}
+
+.b-iframe{
+	 height:100%;
+	 width:100%;
+}
+
+.confirm_message{
+	width:100%;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	font-size:14px;
+}
+
+.error_message {
+	width:100%;
+}
+
+.errorImg {
+    width: 64px;
+	height: 64px;
+	margin-left:43%;
+	margin-top:10px;
+	margin-bottom:10px;
+	background: url("images/dialog/error.png") no-repeat;
+	position: relative;
+}
+
+.briefMessage {
+	height:40px;
+	text-align:center;
+	width:100%;
+	overflow:hidden;
+	word-wrap:break-word;
+}
+
+.detailMessage {
+	height:160px;
+	width:100%;
+	background-color:#e5eaed;
+}
+
+
+.infoMessage{
+  border: 1px;
+  box-shadow: 1px 1px 1px #4cc0c1;
+  padding: 15px;
+  border-radius: 4px;
+  color: #e7e7e7;
+  min-width: 250px;
+  text-align:Center;
+  font-size:16px;
+  display:none;
+}
+
+.infoPrimary{
+	 background: #4cc0c1;
+}
+
+.infoSuccess{
+	background:#8ec165;
+}
+
+.infoMessage .iIcon{
+	  float: left;
+  margin-top: 2px;
+  margin-right: 15px;
+  margin-left: 4px;
+  font-size: 21px;
+}
+
+.infoMessage .message{
+	  display: inline-block;
+  float: left;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.infoMessage .close{
+	padding: 0px;
+  cursor: pointer;
+  background: transparent none repeat scroll 0% 0%;
+  border: 0px none;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0px 1px 0px #FFF;
+  opacity: 0.7;
+  color: #fff;
+  display: inline-block;
+  margin-top: 4px;
+}
