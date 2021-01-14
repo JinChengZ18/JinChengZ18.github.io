@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html style="font-size:10px!important;" lang="zh-cn"><head> <title>清华大学·在线服务系统</title> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <link rel="icon" href="https://thos.tsinghua.edu.cn/fp/resource/image/common/newicon.ico" type="image/x-icon"> <link id="theme" rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/theme-violet-style.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/global.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/global-mb.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/theme-violet-style-global.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/theme-violet-style-cp.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/fp.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/theme-violet-style-fp.css"> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/jquery_002.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/fp_zh_CN.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/sys_zh_CN.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/tp_common_zh_CN.js"></script> <script type="text/javascript">
+	var contextpath = "/fp";
+	var caspath = "http://101.6.6.81:8080/tpass";
+	var isCloud = 'false';
+	var isShec = 'false';
+	var is_full_name = '';
+	var is_district_show = '';
+	var is_root_null = '';
+	var titleName = '清华大学·在线服务系统';
+	var checkAlive = 'false';
+	var javascript_path = "https://thos.tsinghua.edu.cn/fp";
+	var css_path = 'https://thos.tsinghua.edu.cn/fp';
+	var image_path = "https://thos.tsinghua.edu.cn/fp";
+	var version = "1.12.6";
+	var tgt = "";
+	var menu = "fp" ;
+	
+	var id_number = "2018012082" ;
+	var unit_id = "" ;
+	var sys_theme_m = "fp";
+	var  _sys_theme_setting = {"ID_NUMBER":"all","WINDOW_ID":"0","RESOURCE_ID":"0987654321","SB_TOGGLED":"0","BELONG_SYSTEM":"all","FONT_SIZE_NAME":"小","THEME_ID":"13","WINDOW_NAME":"全屏模式","HEAD_FIXED":"0","SB_FIXED":"0","ALL_SCROLL":"0","SB_RIGHT":"0","THEME_IMAGE":"violet","SB_CUSTOM":"1","THEME_CSS":"theme-violet-style","SB_SCROLL":"0","FONT_ID":"0"};
+	var editor_type ="Summernote";
+	var unit_root_id ="00001";
+	var back_act_listener = "";
+	var hidemenu = 'null';
+	var enable_qtip = '';
+	var isI18n = 'false';
+	var I18n = 'zh_CN';
+	var svs_day = '7';
+	var dialect_sql = 'oracle';
+	var sys_project_name = '服务分类';
+	var fp_version = 'campus';
+	var formhome_library = 'false';
+	var formhome_svsconsult = 'false';
+	var withdraw_apply = 'true';
+	var task_docomplete = 'true';
+	var task_projects = 'true';
+	var withdraw_approve = 'true';
+	var svsmng_svsconsult = 'false';
+	var apply_svsconsult = 'false';
+	var recycle_bin = 'true';
+	</script> <link id="layuicss-laydate" rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/laydate.css" media="all"><link id="layuicss-layer" rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/layer.css" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/code.css" media="all"><link href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/WdatePicker.css" rel="stylesheet" type="text/css"></head> <body> <div id="page-scroll-container" class="page-scroll-container" style="overflow-x: hidden; height: 948px;"> <style>
+.h-navigation-header .hn-logo-02 > a{width:175px;}
+.h-navigation-header .hn-logo-02.second-logo-title {width: 314px;}
+.h-navigation-header .big-menu.has-second-logo{width: calc(100% - 314px );}
+.h-navigation-header .big-menu .nav-menu.nav-menu-msn a,
+.h-navigation-header .big-menu .nav-menu.nav-menu-theme a{padding:10px 7px 10px}
+</style> <div class="h-navigation-header"> <a id="head_back" style="position: absolute; left: 10px; top: 10px; font-size: 14px; color: rgb(255, 255, 255); display: none;" class="line-height-30"><i class="fa fa-angle-left push-right-10 fz-22 pull-left push-up-3"></i>返回</a> <div class="hn-logo-02 second-logo-title"> <a class="" href="https://thos.tsinghua.edu.cn/fp" style="display: block;"></a> <font class="point"></font> <span>在线服务系统</span> </div> <div class="adp-big-menu" id="mobile_header_container"> <a class="adp-btn-01 in_a006"></a> <div class="big-menu has-second-logo"> <div class="pull-left adapt-nav-con"> <div name="level1" class="nav-menu nav-menu-sidebar"> <a class="nav-a-menu" href="javascript:;" name="first_item_1" perm_item_id="000_06_01" first_item_id="000_06_01" perm_item_url="fp/formHome"> <span class="fa fa-home"></span><span class="tit">用户首页</span> </a> </div> <div name="level1" class="nav-menu nav-menu-sidebar"> <a class="nav-a-menu" href="javascript:;" first_item_id="000_06_02" perm_item_id="000_06_02" name="first_item_2"> <span class="fa fa-edit"></span><span class="tit">服务列表</span> </a> <div class="menu-fr zoomIn bar"> <div class="nav-menu-two"> <a href="javascript:;" perm_item_url="fp/svscenter" name="second_mobile_1" perm_item_id="000_06_02_01" second_mobile_id="000_06_02_01"> <span class="fa fa-edit"></span><span class="tit">服务列表</span> </a> </div> <div class="nav-menu-two"> <a href="javascript:;" perm_item_url="fp/svscenter/myCollect" name="second_mobile_1" perm_item_id="000_06_02_02" second_mobile_id="000_06_02_02"> <span class="fa fa-star"></span><span class="tit">我的收藏</span> </a> </div> </div> </div> <div name="level1" class="nav-menu nav-menu-sidebar active bg-act"> <a class="nav-a-menu" href="javascript:;" first_item_id="fp_006" perm_item_id="fp_006" name="first_item_2"> <span class="fa fa-list-ul"></span><span class="tit">我申请的</span> </a> </div> <div name="level1" class="nav-menu nav-menu-sidebar"> <a class="nav-a-menu" href="javascript:;" first_item_id="000_06_03" perm_item_id="000_06_03" name="first_item_2"> <span class="fa fa-tasks"></span><span class="tit">我受理的</span> </a> </div> <div name="level1" class="nav-menu nav-menu-sidebar"> <a class="nav-a-menu" perm_item_url="https://thos.tsinghua.edu.cn/announce/html/index.html" perm_item_id="fp_008" target="_blank" first_item_id="fp_008" href="https://thos.tsinghua.edu.cn/announce/html/index.html"> <span class="fa fa-bullhorn"></span><span class="tit">流程公示</span> </a> </div> </div> <div class="nav-menu fold-nav-content"> <a class="nav-a-menu fold-nav-btn"><span class="fa fa-ellipsis-v"></span></a> <div class="menu-fr zoomIn bar fold-nav-list" style="z-index: 999999;"> <div class="nav-menu-two active bg-act"> <a class="nav-a-menu" href="javascript:;" name="first_item_1" perm_item_id="000_06_01" first_item_id="000_06_01" perm_item_url="fp/formHome"> <span class="fa fa-home"></span><span class="tit">用户首页</span> </a> </div> <div name="level1" class="nav-menu-two"> <a class="nav-a-menu" href="javascript:;" first_item_id="000_06_02" perm_item_id="000_06_02" name="first_item_2"> <span class="fa fa-edit"></span><span class="tit">服务列表</span> </a> </div> <div name="level1" class="nav-menu-two active bg-act"> <a class="nav-a-menu" href="javascript:;" first_item_id="fp_006" perm_item_id="fp_006" name="first_item_2"> <span class="fa fa-list-ul"></span><span class="tit">我申请的</span> </a> </div> <div name="level1" class="nav-menu-two"> <a class="nav-a-menu" href="javascript:;" first_item_id="000_06_03" perm_item_id="000_06_03" name="first_item_2"> <span class="fa fa-tasks"></span><span class="tit">我受理的</span> </a> </div> <div class="nav-menu-two"> <a class="nav-a-menu" perm_item_url="https://thos.tsinghua.edu.cn/announce/html/index.html" perm_item_id="fp_008" target="_blank" first_item_id="fp_008" href="https://thos.tsinghua.edu.cn/announce/html/index.html"> <span class="fa fa-bullhorn"></span><span class="tit">流程公示</span> </a> </div> </div> </div> <div class="nav-adapt-right-mark pull-right"> <div class="nav-menu nav-menu-user" id="nav-menu-user"> <a class="more-menu-btn"> <span class="fa fa-bars"></span> <span class="tit">操作菜单</span> </a> <div class="user-info-box user-info-box-02 menu-fr"> <div class="userinfo-menu-two"> <div class="userinfo-two-box menu-theme" id="theme-con"> <div class="zoomIn theme-settings" id="theme-settings" style="left: -370px;"> </div> </div> </div> <a name="a_set_profile"> <span class="fa fa-user"></span> <span>我的信息</span> </a> <a href="https://thos.tsinghua.edu.cn/fp/neusoftlogout"> <span class="fa fa-lock"></span> <span>退出登录</span> </a> </div> </div> <div class="nav-menu nav-menu-user nav-menu-adp-01" id="user-con"> <a id="user-btn-01"> <p class="user-pic-outside"> <img class="user-pic" id="menu_user_avatar" onerror="this.src='/fp/resource/image/common/user2.jpg'" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/user2.jpg"> </p> <span class="tit">张锦程</span></a> <div class="user-info-box menu-fr" style="width:230px!important;"> <a href="javascript:;" name="a_set_profile"> <span class="fa fa-user"></span> <span>我的信息</span> </a> <a href="https://thos.tsinghua.edu.cn/fp/neusoftlogout"> <span class="fa fa-lock"></span> <span>退出登录</span> </a> </div> </div> </div> </div> </div> </div> <script type="text/javascript">
+$("a[name='new_question']").click(function(){
+	up.feedback.showConsultAsk();
+});
+
+$("a[name='follow_new_question']").click(function(){
+	up.feedback.showConsultAsk();
+});
+
+
+function headBack(){
+	if(document.body.scrollWidth<=1023){
+		$("#head_back").show();
+		$(".hn-logo-02").children("span").attr("style","width: calc(100% - 50px);text-align: center;margin-left: 50px;");
+		$(".hn-logo-02").children("a").hide();
+	}else{
+		$("#head_back").hide();
+		$(".hn-logo-02").find("span").removeAttr("style");
+		$(".hn-logo-02").children("a").show();
+	}
+}
+headBack();
+$("#head_back").click(function(){
+	$(this).css("pointer-events","none");
+	var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger"){ // 微信
+        if(history.length > 1){
+        	window.history.go( -1 );
+        }else{
+        	WeixinJSBridge.call('closeWindow');
+        }
+    }else{
+    	window.history.go( -1 );
+    }
+	setTimeout(function (){
+		$("#head_back").css("pointer-events","");
+       },2000);
+})
+window.onresize = function() {
+	headBack();
+}
+
+
+</script> <div class="page-container menu-mini-open"> <div class="data-tab-con" style="display:none;" id="div_tab_second_menu_000_06_02" name="div_tab_second_menu"> <div class="data-center-tabcon push-down-0" style="border-bottom:1px solid #c4c4c3;background-color:#fff;"> <div class="block-none"></div> <div class="swiper-container swiper-bigtab-container swiper-container-horizontal swiper-container-free-mode"> <ul class="info-center-tab swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"> </ul> </div> </div> </div> <div class="data-tab-con" style="" id="div_tab_second_menu_fp_006" name="div_tab_second_menu"> <div class="data-center-tabcon push-down-0" style="border-bottom:1px solid #c4c4c3;background-color:#fff;"> <div class="block-none"></div> <div class="swiper-container swiper-bigtab-container swiper-container-horizontal swiper-container-free-mode"> <ul class="info-center-tab swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"> <li class="swiper-slide swiper-slide-active"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="fp_006_001" tab_first_item_id="fp_006" tab_perm_url="fp/myserviceapply/indexNew"> 在办事项 </a> </li> <li class="swiper-slide active swiper-slide-next"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="fp_006_002" tab_first_item_id="fp_006" tab_perm_url="fp/myserviceapply/indexFinish"> 办结事项 </a> </li> <li class="swiper-slide"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="fp_006_003" tab_first_item_id="fp_006" tab_perm_url="fp/aggregation/aggregationList"> 聚合事项 </a> </li> </ul> </div> </div> </div> <div class="data-tab-con" style="display:none;" id="div_tab_second_menu_000_06_03" name="div_tab_second_menu"> <div class="data-center-tabcon push-down-0" style="border-bottom:1px solid #c4c4c3;background-color:#fff;"> <div class="block-none"></div> <div class="swiper-container swiper-bigtab-container swiper-container-horizontal swiper-container-free-mode"> <ul class="info-center-tab swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"> <li class="active swiper-slide swiper-slide-active"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="000_06_03_019" tab_first_item_id="000_06_03" tab_perm_url="fp/taskcenter/tasktodoNew"> 待办事项 </a> </li> <li class="swiper-slide swiper-slide-next"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="000_06_03_021" tab_first_item_id="000_06_03" tab_perm_url="fp/carboncopy/carboncopyNew"> 待阅事项 </a> </li> <li class="swiper-slide"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="000_06_03_020" tab_first_item_id="000_06_03" tab_perm_url="fp/taskcenter/tasktodoFinish"> 已办事项 </a> </li> <li class="swiper-slide"> <a class="ui-link" name="a_tab_second_item" tab_second_item_id="000_06_03_10" tab_first_item_id="000_06_03" tab_perm_url="fp/delmng/mydel"> 委托事项 </a> </li> </ul> </div> </div> </div> <div id="div_menu_tab" class="page-sidebar mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar mCS_disabled" style="display: none;"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <ul class="x-navigation x-navigation-custom"> <li class="xn-title"><font>应用菜单</font><i class="in_a002 close-sidebar pull-right"></i> </li> </ul> </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div> <div class="data-block-content record-plain-color" name="tab_panel_fp_006_001" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_fp_006_002" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_fp_006_003" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_000_06_03_019" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_000_06_03_021" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_000_06_03_020" style="display:none;"> </div> <div class="data-block-content record-plain-color" name="tab_panel_000_06_03_10" style="display:none;"> </div> <div id="div_menu_mini_01" class="page-sidebar mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar mCS_disabled" style="display: none;"><div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="" tabindex="0"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <ul class="x-navigation x-navigation-custom"> <li> </li><li class="xn-title"><font>应用菜单</font><i class="in_a002 close-sidebar pull-right"></i> </li> <li name="level2" second_item_fid="000_06_02" class="menu-li" style="display:none;"> <a href="javascript:;" class="text-overflow" title="服务列表" perm_item_url="fp/svscenter" name="second_item_1" perm_item_id="000_06_02_01" second_item_id="000_06_02_01"> <span class="fa fa-edit"></span> <span class="xn-text">服务列表</span> </a> </li> <li name="level2" second_item_fid="000_06_02" class="menu-li" style="display:none;"> <a href="javascript:;" class="text-overflow" title="我的收藏" perm_item_url="fp/svscenter/myCollect" name="second_item_1" perm_item_id="000_06_02_02" second_item_id="000_06_02_02"> <span class="fa fa-star"></span> <span class="xn-text">我的收藏</span> </a> </li> </ul> </div><div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div> <div class="page-content" style="margin-left: 0px; min-height: 884px;"> <div class="page-content-insidebox scroll mCustomScrollbar _mCS_3 mCS-autoHide mCS_no_scrollbar" id="page-content" style="min-height: 833px;">
+
+
+
+
+
+<div id="choosePrintMod" class="pull-left" style="display:none"> <div class="modal-dialog modal-lg push-up-0 push-down-0 push-left-0 push-right-0" style="max-width: 570px;"> <div class="modal-content modal-content-noborder"> <div class="modal-header"> <button id="fp_select_print_close" type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">×</span><span class="sr-only">Close</span> </button> <h4 class="modal-title">选择导出内容</h4> </div> <div class="modal-body" style="padding-bottom: 0;overflow-y:auto; overflow-x:auto; width:100%; height:220px;"> <div class="push-up-5 bar" id="printModList_container"> </div> </div> <div class="modal-footer"> <button class="btn btn-default pull-left" data-dismiss="modal" type="button" id="fp_select_print_cancel">取消</button> </div> </div> </div> </div> <script id="printModList" type="text/html">
+	{{if $data.length>0}}
+		{{each $data as value i}}
+          {{if value.TEMPTYPE == 2}}
+           <div class="col-md-6 col-sm-12 col-xs-12 push-down-20" url = "{{value.URL}}" name = "printModReport">
+		  	  <a class="btn btn-default btn-lg btn-block text-left" style="text-align: left !important;" ><i class="fa fa-download"></i>{{value.TEMPLATE_NAME}}<a>
+		   </div>
+	      {{else}}
+           <div class="col-md-6 col-sm-12 col-xs-12 push-down-20" procinst_id = "{{value.procinst_id}}" TEMPLATE_NAME = "{{value.TEMPLATE_NAME}}" TEMPLATE_ID = "{{value.TEMPLATE_ID}}" TEMPTYPE = "{{value.TEMPTYPE}}" name = "printModLocal">
+		  	  <a class="btn btn-default btn-lg btn-block text-left" style="text-align: left !important;" ><i class="fa fa-download"></i>{{value.TEMPLATE_NAME}}<a>
+		   </div>
+	      {{/if}}
+		{{/each}}
+	{{else}}
+		没有匹配记录！
+	{{/if}}
+</script> <link rel="stylesheet" type="text/css" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/all-blueimp-gallery.css"> <link rel="stylesheet" type="text/css" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/view.css"> <style>
+.loadingProc {
+    z-index: 9999;
+    background: url("././workflow/processDesigner/img/loading.gif") 50% 50% no-repeat #f9f9f9;
+}
+</style> <script test="text/html">
+ var print_content_button = "true"
+</script> <div class="page-content-insidebox scroll" id="divServiceview"><div class="page-content-wrap">
+                              <div class="content-frame-top">
+				                  <div class="page-title">
+				 					<h2>
+					  				  <span class="fa fa-eye"></span>
+					    			 事项查看（学生进出校审批）
+									</h2>
+								   </div>
+		                   	</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12 outside-space-menu">
+								<!--应用活跃度页面主要内容从这里开始，请将此注释区间内的内容复制进工程 START-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="responsive-padding-box">
+											<div class="pull-right text-right fz-14 line-height-30">申请编号：2101121503493121</div>
+										</div>
+										<div class="responsive-padding-box push-up-10">
+											<div class="adp-foldable-con" style="height:450px;">
+												<div class="title">
+													<span>办理流程</span>
+													<a class="arr-fold-box text-primary" id="apply-flow-fold">
+														<span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i>
+													</a>
+												</div>
+												<div class="body">
+													<div class="border-box" style="min-height:400px;border:none;">
+                                                    <div id="loadingProc" class="loadingProc" style="width: 100%; height: 400px; display: none;"></div>
+		        										<iframe style="border: 0px none; overflow: hidden; width: 100%; height: 100%; min-height: 400px;" id="processIframe" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/procmonitor.htm"></iframe>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="responsive-padding-box push-up-20">
+											<div class="adp-foldable-con">
+												<div class="title">
+													<span>办理详情</span>
+													<a class="arr-fold-box text-primary" id="apply-flow-fold"><span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i></a>
+												</div>
+												<div class="body">
+													<div class="table-responsive push-up-15">
+								                		<div class="border-box col-md-12 padding-none" style="border:none;">
+									             			<div class="manage-table" id="historyTableDiv"><table id="table_history_list_page" class="amost-datatable" style="width:100%;">
+		<thead>
+			<tr>
+				<th>任务环节</th>													
+				<th>办理人</th>
+				<th>办理意见</th>
+                <th>办理结果</th>
+                <th>办理时间</th>
+               
+			</tr>
+		</thead>
+		<tbody>
+			
+			
+				
+				<tr>
+				
+				 <td><b>任务环节</b><span>服务发起人</span></td>
+				 <td><b>办理人</b><span>张锦程</span></td>
+				 
+				 <td><b>办理意见</b><span></span></td>
+				 
+				 <td><b>办理结果</b><span>提交申请</span></td>
+				 <td><b>办理时间</b><span>2021-01-12 15:03:48</span></td>
+                  
+                </tr>
+        	
+				
+				<tr>
+				
+				 <td><b>任务环节</b><span>院系审批</span></td>
+				 <td><b>办理人</b><span>马静</span></td>
+				 
+				 <td><b>办理意见</b><span>请上传预约单或挂号单</span></td>
+				 
+				 <td><b>办理结果</b><span>回退</span></td>
+				 <td><b>办理时间</b><span>2021-01-12 17:44:17</span></td>
+                  
+                </tr>
+        	
+				
+				<tr>
+				
+				 <td><b>任务环节</b><span>服务发起人</span></td>
+				 <td><b>办理人</b><span>张锦程</span></td>
+				 
+				 <td><b>办理意见</b><span></span></td>
+				 
+				 <td><b>办理结果</b><span>提交</span></td>
+				 <td><b>办理时间</b><span>2021-01-13 02:40:02</span></td>
+                  
+                </tr>
+        	
+				
+				<tr>
+				
+				 <td><b>任务环节</b><span>院系审批</span></td>
+				 <td><b>办理人</b><span>马静</span></td>
+				 
+				 <td><b>办理意见</b><span>往返途中请务必做好个...<a class="text-primary" onclick="showOpinion('往返途中请务必做好个人防护。请严格按照申报行程执行，不乱跑，快去快回。进校请佩戴口罩，主动出示学生证和“紫荆码”。')">更多</a></span></td>
+				 
+				 <td><b>办理结果</b><span>同意</span></td>
+				 <td><b>办理时间</b><span>2021-01-13 09:13:06</span></td>
+                  
+                </tr>
+        	
+		
+		</tbody>
+	</table></div>
+							                   			</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="responsive-padding-box push-up-20">
+											<div class="adp-foldable-con">
+											<div class="title">
+												<span>申请表单</span>
+												<a class="arr-fold-box text-primary" id="apply-flow-fold"><span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i></a>
+											</div>
+											<div class="body">
+                                                 <!--START填表外壳-->
+				              				   <div class="border-box push-up-0 pull-left" style="border:none;padding:10px;width:100%;">
+														<div id="loadingForm" class="exam-loader-centerbox no-background" style="display: none;">
+															<div class="loader">
+																<div class="loader-inner line-scale">
+																	<div></div><div></div><div></div><div></div><div></div>
+																</div>
+															</div>
+															<div class="exam-loader-text">请稍等，表单正在加载中！</div>
+														</div>
+				              					      <iframe style="border: 0px none; width: 100%; height: 756px; min-height: 500px;" id="formIframe" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/formParser.htm"></iframe>
+													<div id="div_custom_form_serviceview"></div>
+										            <div class="responsive-padding-box" style="display:none" id="combinationStepApply">
+											        <div id="wizardApply" class="wizard swiper-steps-more bar swiper-container" style="overflow-x:hidden;">
+											        </div>
+										            </div>
+												</div>
+							        			<!--END填表外壳-->
+												</div>
+											</div>
+										</div>
+										<!--START操作按钮-->
+										<div class="form-group responsive-padding-box push-up-20 adapt-btn-box txt-center">
+										    <div class="form-group col-md-12 push-up-20 adapt-btn-box">
+							                   <div class="bar">
+								                 <div class="col-md-1 col-sm-2 padding-none pull-left push-right-10 tasktodo-btn" style="">
+									               <button class="btn btn-primary push-down-10 btn-block pull-left" type="button" id="export" style="">导出</button>
+								                 </div>
+							              		 <div class="col-md-1 col-sm-2 padding-none pull-left push-right-10 tasktodo-btn">
+													<button class="btn btn-primary push-down-10 btn-block pull-left" type="button" id="print_template" style="display:none;">
+													导出
+													</button>
+											 	</div>
+												<div class="col-md-1 col-sm-1 padding-none pull-right tasktodo-btn">
+													<button class="btn btn-default push-down-10 btn-block pull-right" type="button" onclick="window.history.go(-1)">
+													返回	
+													</button>   
+                              					</div>
+                          					  </div>
+                      					  </div>																	
+										</div>
+										<!--END操作按钮-->
+									</div>
+								</div>
+								<!--应用活跃度页面主要内容从这里开始，请将此注释区间内的内容复制进工程 END-->
+							</div>
+						
+	                </div></div> <div id="uploadfilesRecords" class="modal-dialog modal-lg push-up-0 push-down-0 push-left-0 push-right-0" style="display:none"> <div class="modal-content modal-content-noborder"> <div class="modal-header"> <button type="button" class="close" name="closeUploadfilesRecords"> <span>×</span><span class="sr-only">Close</span> </button> <h4 class="modal-title" id="uploadfilesRecords_title"></h4> </div> <div class="modal-body" style="max-height:410px;overflow:auto;"> <div class="responsive-padding-box form-horizontal"> <div class="table-responsive amost-datatable-box push-up-5" style="overflow:auto;"> <table class="amost-datatable" style="width:100%;"> <thead> <tr> <th width="65">序号</th> <th id="uploadfilesRecords_th">变更记录</th> <th>任务环节</th> <th>操作人</th> <th>操作时间</th> </tr> </thead> <tbody id="uploadfilesRecords_tbody"> </tbody> </table> </div> </div> </div> <div class="modal-footer"> <button type="button" name="closeUploadfilesRecords" class="btn btn-primary pull-right">确定</button> <button type="button" name="closeUploadfilesRecords" class="btn btn-default pull-left">取消</button> </div> </div> </div> <div class="blueimp-gallery blueimp-gallery-controls" id="blueimp-gallery" style="height:100%;width:100%"><div class="slides"></div><h3 class="title"></h3><a class="prev">‹</a> <a class="next">›</a> <a class="close">×</a><ol class="indicator"></ol></div> <script id="serviceview_list_page" type="text/html">
+         	            <div class="page-content-wrap">
+                              <div class="content-frame-top">
+				                  <div class="page-title">
+				 					<h2>
+					  				  <span class="fa fa-eye"></span>
+					    			 事项查看（{{name}}）
+									</h2>
+								   </div>
+		                   	</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12 outside-space-menu">
+								<!--应用活跃度页面主要内容从这里开始，请将此注释区间内的内容复制进工程 START-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="responsive-padding-box">
+											<div class="pull-right text-right fz-14 line-height-30">申请编号：{{procinst_id}}</div>
+										</div>
+										<div class="responsive-padding-box push-up-10">
+											<div class="adp-foldable-con" style="height:450px;">
+												<div class="title">
+													<span>办理流程</span>
+													<a class="arr-fold-box text-primary" id="apply-flow-fold">
+														<span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i>
+													</a>
+												</div>
+												<div class="body">
+													<div class="border-box" style="min-height:400px;border:none;">
+                                                    <div id="loadingProc" class = "loadingProc" style="width: 100%; height: 400px;"></div>
+		        										<iframe style="display:none;border:0;overflow:hidden;width:100%;height:100%;min-height:400px;" id="processIframe" src="/fp/workflow/procinst/monitor/swf/entry/procmonitor.jsp?procinstId={{procinst_id}}"></iframe>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="responsive-padding-box push-up-20">
+											<div class="adp-foldable-con">
+												<div class="title">
+													<span>办理详情</span>
+													<a class="arr-fold-box text-primary" id="apply-flow-fold"><span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i></a>
+												</div>
+												<div class="body">
+													<div class="table-responsive push-up-15">
+								                		<div class="border-box col-md-12 padding-none" style="border:none;">
+									             			<div class="manage-table" id="historyTableDiv">					
+								                 			</div>
+							                   			</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="responsive-padding-box push-up-20">
+											<div class="adp-foldable-con">
+											<div class="title">
+												<span>申请表单</span>
+												<a class="arr-fold-box text-primary" id="apply-flow-fold"><span class="hide_one">收起</span><i class="push-left-5 fa fa-angle-up"></i></a>
+											</div>
+											<div class="body">
+                                                 <!--START填表外壳-->
+				              				   <div class="border-box push-up-0 pull-left" style="border:none;padding:10px;width:100%;">
+														<div id="loadingForm" class="exam-loader-centerbox no-background">
+															<div class="loader">
+																<div class="loader-inner line-scale">
+																	<div></div><div></div><div></div><div></div><div></div>
+																</div>
+															</div>
+															<div class="exam-loader-text">请稍等，表单正在加载中！</div>
+														</div>
+				              					      <iframe style="border:0;width:100%;height:100%;min-height:500px;" id="formIframe"></iframe>
+													<div id="div_custom_form_serviceview"></div>
+										            <div class="responsive-padding-box" style = "display:none" id = "combinationStepApply">
+											        <div id="wizardApply" class="wizard swiper-steps-more bar swiper-container" style="overflow-x:hidden;">
+											        </div>
+										            </div>
+												</div>
+							        			<!--END填表外壳-->
+												</div>
+											</div>
+										</div>
+										<!--START操作按钮-->
+										<div class="form-group responsive-padding-box push-up-20 adapt-btn-box txt-center">
+										    <div class="form-group col-md-12 push-up-20 adapt-btn-box">
+							                   <div class="bar">
+								                 <div class="col-md-1 col-sm-2 padding-none pull-left push-right-10 tasktodo-btn" style= "display:none;">
+									               <button class="btn btn-primary push-down-10 btn-block pull-left" type="button" id="export" style="display:none;">导出</button>
+								                 </div>
+							              		 <div class="col-md-1 col-sm-2 padding-none pull-left push-right-10 tasktodo-btn">
+													<button class="btn btn-primary push-down-10 btn-block pull-left" type="button" id="print_template" style="display:none;">
+													导出
+													</button>
+											 	</div>
+												<div class="col-md-1 col-sm-1 padding-none pull-right tasktodo-btn">
+													<button class="btn btn-default push-down-10 btn-block pull-right" type="button" onclick="window.history.go(-1)">
+													返回	
+													</button>   
+                              					</div>
+                          					  </div>
+                      					  </div>																	
+										</div>
+										<!--END操作按钮-->
+									</div>
+								</div>
+								<!--应用活跃度页面主要内容从这里开始，请将此注释区间内的内容复制进工程 END-->
+							</div>
+						
+	                </div>
+</script> <script id="history_list_template" type="text/html">
+	<table id="table_history_list_page" class="amost-datatable" style="width:100%;">
+		<thead>
+			<tr>
+				<th>任务环节</th>													
+				<th>办理人</th>
+				<th>办理意见</th>
+                <th>办理结果</th>
+                <th>办理时间</th>
+               {{if $data.isupload== '1' }}	
+                <th>查看附件</th>
+               {{/if}}
+			</tr>
+		</thead>
+		<tbody>
+		{{if $data != null && $data.length > 0 }}	
+			{{each $data as value}}
+				{{if value.approve_result=="正在办理"}}
+				<tr class="special">
+				{{else}}
+				<tr>
+				{{/if}}
+				 <td><b>任务环节</b><span>{{value.approve_name}}</span></td>
+				 <td><b>办理人</b><span>{{value.approve_person}}</span></td>
+				 {{if value.approve_opinion.length>10}}
+				 <td><b>办理意见</b><span>{{subStr(value.approve_opinion,10)}}<a class="text-primary" onclick="showOpinion('{{value.approve_opinion}}')">更多</a></span></td>
+				 {{else}}
+				 <td><b>办理意见</b><span>{{value.approve_opinion}}</span></td>
+				 {{/if}}
+				 <td><b>办理结果</b><span>{{value.approve_result}}</span></td>
+				 <td><b>办理时间</b><span>{{value.approve_date}}</span></td>
+                  {{if $data.isupload== '1' }}	
+                     {{if value.isuploadFile== '1' }}	 
+				   <td><b>查看附件</b><span   title='查看附件' ><a  style="float:none" onclick="showUploadFiles('{{value.task_id}}')"><li class='fa fa-eye push-right-5 push-up-0'></li>查看附件</a></span></td>
+                   {{else}}
+                    <td><b>查看附件</b><span></span></td>
+                  {{/if}}
+                 {{/if}}
+                </tr>
+        	{{/each}}
+		{{else}}
+			<tr class="special"><td colspan="5" align="center">未检索到记录。</td></tr>
+		{{/if}}
+		</tbody>
+	</table>
+</script> <script id="conbinationContentApply" type="text/html">
+        {{if $data.length>0}}
+		<ul class="steps_more anchor swiper-wrapper">
+        {{each $data as value i}}
+		  <li class="swiper-slide">
+			<a href="#step-{{value.sort}}" class="selected">
+			  <span class="stepNumber">{{value.sort}}</span>
+			  <span class="stepDesc">第{{value.sort}}页<br />
+			  <small>{{value.name}}</small></span>
+			</a>
+		  </li>
+        {{/each}}
+		</ul>
+        {{each $data as value i}}
+	    <div id="step-{{value.sort}}">
+		  <div class="bar" style="-webkit-overflow-scrolling:touch;overflow:auto;">
+		  <iframe style="border:0;width:100%;display:none;" id="formIframe-{{value.sort}}"></iframe>
+		  <div id="div_custom_form_serveapply_{{value.sort}}"></div>
+		  </div>
+		</div>
+        {{/each}}
+		{{else}}
+				没有匹配记录！
+	    {{/if}}
+</script> <div id="uploadfilesRecordsOfApprove" class="modal-dialog push-up-0 push-down-0 push-left-0 push-right-0" style="max-width:400px;display:none"> <div class="modal-content modal-content-noborder"> <div class="modal-header"> <h4 class="modal-title">附件详细</h4> </div> <div class="modal-body" style="overflow:auto;"> <div class="responsive-padding-box form-horizontal"> <div class="table-responsive amost-datatable-box push-up-5" style="overflow:auto;"> <table class="amost-datatable" style="width:100%;"> <thead> <tr> <th>附件名称</th> <th style="min-width:80px;max-width:80px;">操作</th> </tr> </thead> <tbody id="uploadfilesRecordsOfApprove_tbody"> </tbody> </table> </div> </div> </div> <div class="modal-footer"> <button type="button" name="closeUploadfilesRecordsOfApprove" class="btn btn-primary pull-right">确定</button> <button type="button" name="closeUploadfilesRecordsOfApprove" class="btn btn-default pull-left">取消</button> </div> </div> </div> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/viewer.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/jquery-viewer.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/render-picture-view.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/printMod.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/serviceview.js"></script>
+</div> </div> <div class="footer-box"> <div class="footer-box-inside" style="height:auto;"> <p class="pull-left"><span class="left" id="time">清华大学 版权所有 Copyright ©&nbsp;</span> <span class="adpt-footer-text">&nbsp;在线服务系统 Tsinghua OS , All Rights Reserved</span></p> <p class="pull-right"> <span>技术支持：信息化技术中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </p> <p class="clear"></p> </div> </div> <div class="clear"></div> </div> </div> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/index.css"> <link rel="stylesheet" type="text/css" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/all.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/jquery.css"> <link rel="stylesheet" href="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/layui.css"> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/all.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/layui.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/WdatePicker.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/common.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/theme.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/jquery.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/actions.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/menu.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/vue.js"></script> <script type="text/javascript" src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/vant.js"></script> <script type="text/javascript">
+		$(function(){
+			setTimeout("footerFunction()","6000");
+		});
+		
+		function footerFunction(){
+			$("#footerbox").show();
+		}
+		var isAndroid = /android/.test(window.navigator.userAgent.toLocaleLowerCase());
+		if(!isAndroid){
+			var winheight = function(){
+				var windowH = $(window).height();
+				var fixW = $(window).width();
+				if(fixW < 1024){
+					$(".page-content-insidebox").css("min-height",windowH - 115);
+					$(".page-scroll-container").css("height",windowH);
+					$(".page-navigation-top-fixed .page-container").css("height","");
+					$(".page-navigation-top-fixed .page-container").css("overflow-x","");
+				}else{
+					$(".page-content-insidebox").css("min-height",windowH - 115);
+					$(".page-scroll-container").css("height",windowH);
+					$(".page-navigation-top-fixed .page-container").css("height",windowH - 64);
+					$(".page-navigation-top-fixed .page-container").css("overflow-x","hidden");
+				}
+			};
+			winheight();
+			$(window).resize(function(){
+				winheight();
+			});
+		}
+	</script> <script type="text/javascript">
+		$(function(){
+			
+			//如果是点击个人设置
+			$('a[name="a_set_profile"]').click(function(){
+				Util.load("fp/formHome/profileTsingHua");
+				$("div[name='level1']").removeClass("active bg-act");
+			});
+			
+			//懒加载置顶的JS
+			setTimeout(function(){
+				var myScript=document.createElement("script");
+			    myScript.src= "https://thos.tsinghua.edu.cn/fp/resource/js/common/plugins/scrolltotop/scrolltopcontrol.js";
+			    document.body.appendChild(myScript);
+			},2000)
+			
+		});
+		
+		/*头部按钮合并规则2017-07-20*/
+		var username_adape = function(){
+			var windowW = $(window).width();
+			if(windowW < 1800){
+				var username_w = $("#user-btn-01 span.tit").width();
+				if(username_w > 260){
+					$(".big-menu").addClass("early-adapt-active");
+					
+				};
+			}if(windowW < 1600){
+				var username_w = $("#user-btn-01 span.tit").width();
+				 if(username_w > 180){
+					$(".big-menu").addClass("early-adapt-active");
+				};
+			}else{
+					$(".big-menu").removeClass("early-adapt-active");
+			};
+		
+		};
+		var headerdrop_adape = function(){
+			var username_w = $("#user-btn-01 span.tit").width();
+			var windowW = $(window).width();
+			if($(".big-menu").hasClass("early-adapt-active")){
+				$("#message-con .nav-menu-msn").css("left","-400px");
+				$("#theme-settings").css("left","-260px");
+			}else{
+				$("#message-con .nav-menu-msn").css("left",0 - 400 - username_w - 105);
+				$("#theme-settings").css("left",0 - 260 - username_w - 65);
+			};
+			if(windowW < 1320){
+				$("#message-con .nav-menu-msn").css("left","-400px");
+				$("#theme-settings").css("left","-260px");
+			};
+			if(windowW < 1024){
+				$("#message-con .nav-menu-msn").css("left",0);
+				$("#theme-settings").css("left",0);
+			};
+		};
+		username_adape();
+		headerdrop_adape();
+		$(window).resize(function(){
+			username_adape();
+			headerdrop_adape();
+        });
+		/*头部按钮合并规则 2017-07-20*/
+		$("#page-content").on("click",function(e){
+			var bodW = $(window).width();
+			if(bodW > 1023){
+			$("#message-con").removeClass("active");
+			$("#theme-con").removeClass("active");
+			$("#user-con").removeClass("active");
+			$("#message-con").removeClass("bg-act");
+			$("#theme-con").removeClass("bg-act");
+			$("#user-con").removeClass("bg-act");
+			$("#new_message").parent(".nav-menu").removeClass("active");
+			$("#theme-btn").parent(".nav-menu").removeClass("active");
+			$("#new_message").parent(".nav-menu").removeClass("bg-act");
+			$("#theme-btn").parent(".nav-menu").removeClass("bg-act");
+			$("#nav-menu-user").removeClass("active");
+			}
+    	});
+	</script> <script>
+		$(document).ready(function(){
+			/**头部导航折叠 5.23版 START**/
+			function pageHeaderFlod(){
+				var markPoint_L=$(".nav-adapt-right-mark").offset().left;
+				$(".adapt-nav-con .nav-menu").each(function(i){
+					var navWidth = $(this).outerWidth();
+					var navR = $(this).offset().left + navWidth + 60;
+					if(navR > markPoint_L){
+						$(".fold-nav-content").show();
+						$(this).addClass("navhide");
+						$(".fold-nav-list").find("div:eq("+i+")").show();
+					}
+				});
+			};
+			function pageHeaderAdapt(){
+				var firstNav = $(".adapt-nav-con .nav-menu.navhide:first");
+				if(firstNav.length>0){
+					var markPoint_L=$(".nav-adapt-right-mark").offset().left;
+					var numNav = firstNav.index();
+					var navR = firstNav.offset().left+200;
+					if(navR < markPoint_L){
+						firstNav.removeClass("navhide");
+						$(".fold-nav-list").find(".nav-menu-two:eq("+numNav+")").hide();
+					};
+					if($(".adapt-nav-con").children(".navhide").length ==0){
+						$(".fold-nav-content").hide();
+					};
+				}
+			};
+			$(".fold-nav-btn").click(function(){
+				$(this).closest(".fold-nav-content").toggleClass("active");
+			});
+			/**头部导航 END**/
+			if($(window).width() > 1023){
+				pageHeaderFlod()
+			}
+			$(window).resize(function() {
+				if($(window).width() > 1023){
+					pageHeaderFlod()
+					pageHeaderAdapt()
+				}
+			});
+
+		});
+	    /**头部导航折叠 5.23版 END**/
+		
+    	</script>  <script src="%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%C2%B7%E5%9C%A8%E7%BA%BF%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F_files/scrolltopcontrol.js"></script><div id="topcontrol" style="position: fixed; bottom: 10px; right: 10px; opacity: 1; cursor: pointer; display: none;" title="Scroll Back to Top"><!-- TO TOP --><div class="to-top"><span class="fa fa-angle-up"></span></div><!-- END TO TOP --></div><div class="layui-layer-move"></div></body></html>
